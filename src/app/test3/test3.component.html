@@ -1,0 +1,59 @@
+<p>
+    test3component
+</p>
+
+<div class="input-group mb-3">
+    <span class="input-group-text">@@@</span>
+    <input type="text" class="form-controle" type="text" placeholder="Username" id="myInput"
+        (input)="getInputText($event);">
+</div>
+
+
+
+<br><br>
+<button (click)="CkeckInputText()">
+    ALERT
+</button>
+<br><br>
+<P>{{inputTagValue}}</P>
+
+
+
+<button [disabled]="isButtonDisabled">
+    Click me
+</button>
+
+<!-- <p *ngFor="let x of animals"> {{x}} </p>
+<hr> -->
+<!-- /////////////////////////// -->
+<p *ngIf="isTextEnabled; else elseCondition">
+    text for showing in p tag ....
+</p>
+<ng-template #elseCondition>
+    <p>
+        Text is hidden .....
+    </p>
+</ng-template>
+<hr>
+<p *ngFor="let country of countries; let i = index">
+    {{i+1}} {{ country }}
+</p>
+
+<ul>
+    <li *ngFor="let country of countries; let i = index"> {{i + 1}} _ {{ country }} </li>
+</ul>
+<hr>
+
+<p *ngFor="let person of Persons" class="styleTest">
+    {{ person.fname }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{person.lname}}
+</p>
+
+<!-- <p [ngStyle]="{'background-color': getColor()}"> Test for attribute directive </p>
+<p [ngClass]="{styleTest: isTextEnabled === true}"> Test for attribute directive </p> -->
+
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">@</span>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+        aria-describedby="basic-addon1">
+</div>

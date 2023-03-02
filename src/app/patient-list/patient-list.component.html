@@ -1,0 +1,16 @@
+<p>patient-list works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="list-group listItemHover">
+                <li class="list-group-item" *ngFor="let pt of patients; let i = index"
+                    [class.active]="i == currentIndex" (click)="getSelectedPatient(pt, i)">
+                    {{pt.name}} - {{pt.familyName}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <app-patient-detail [patientForDetail]="selectedPatient"></app-patient-detail>
+        </div>
+    </div>
+</div>
